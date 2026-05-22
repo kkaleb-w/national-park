@@ -1,34 +1,65 @@
-.App-logo {
-    height: 40vmin;
+/* Congaree Documentary — global styles */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap");
+
+html {
+    scroll-behavior: auto; /* Lenis handles smooth scroll */
+}
+
+html,
+body {
+    background-color: #0a0b0a;
+    color: #e6e0d4;
+}
+
+.App {
+    font-family: "Outfit", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Subtle film grain overlay across the whole site for cinematic feel */
+.App::before {
+    content: "";
+    position: fixed;
+    inset: 0;
     pointer-events: none;
+    z-index: 60;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.7'/></svg>");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Custom selection color */
+::selection {
+    background-color: #d4a373;
+    color: #0a0b0a;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Hide default scrollbar (Lenis is in charge) but keep accessible */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0b0a;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(212, 163, 115, 0.25);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(212, 163, 115, 0.5);
 }
 
-.App-link {
-    color: #61dafb;
+/* Lenis recommended styles */
+html.lenis,
+html.lenis body {
+    height: auto;
 }
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
 }
