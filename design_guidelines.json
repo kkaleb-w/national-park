@@ -1,0 +1,106 @@
+{
+  "theme": "DARK",
+  "archetype": "5 (Jewel & Luxury) with Organic & Earthy Tones",
+  "design_philosophy": "Cinematic scrollytelling. Emotionally directed. Uses close-ups, sweeping landscapes, negative space, and deep earthy colors to create an immersive documentary experience for the Congaree National Park.",
+  "colors": {
+    "background_primary": "#0a0b0a",
+    "background_secondary": "#131811",
+    "text_primary": "#e6e0d4",
+    "text_secondary": "#9ca395",
+    "accent_primary": "#d4a373",
+    "accent_secondary": "#8b9671",
+    "border_color": "rgba(230, 224, 212, 0.1)"
+  },
+  "typography": {
+    "font_primary": "Cormorant Garamond, serif",
+    "font_secondary": "Outfit, sans-serif",
+    "headings": {
+      "family": "Cormorant Garamond",
+      "h1_classes": "text-5xl sm:text-6xl lg:text-7xl font-light tracking-tighter leading-none text-white",
+      "h2_classes": "text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight leading-tight text-white",
+      "h3_classes": "text-2xl sm:text-3xl font-light tracking-tight text-[#e6e0d4]",
+      "chapter_marker": "text-sm uppercase tracking-[0.3em] text-[#d4a373] font-sans font-semibold mb-4 block"
+    },
+    "body": {
+      "family": "Outfit",
+      "classes": "text-base sm:text-lg leading-relaxed text-[#9ca395] font-light"
+    }
+  },
+  "layout": {
+    "spacing": "Generous spacing. Use py-24, py-32 for sections. 100vh for immersive background sections.",
+    "structure": "Scrollytelling format. Background images use position: sticky or fixed with full viewport height. Content boxes scroll over the background images.",
+    "content_box_style": "backdrop-blur-xl bg-[#0a0b0a]/60 border border-white/10 p-8 md:p-12 rounded-lg max-w-xl shadow-2xl",
+    "grid_system": "Bento grids for gallery sections if any, but primary flow is single column narrative with asymmetrical text box placements (left aligned on one section, right aligned on next)."
+  },
+  "motion": {
+    "scroll_library": "lenis for smooth momentum scrolling.",
+    "animation_library": "framer-motion for scroll-triggered fades and parallax.",
+    "parallax_effect": "Use useScroll and useTransform to move background images slightly slower than content.",
+    "entry_animations": "Fade in and slight translate-y upward for text boxes as they enter the viewport."
+  },
+  "components": {
+    "hero": "Full screen immersive background image, centered title with tracking-tighter, slow subtle zoom-in animation on background.",
+    "chapter_section": "100vh container. Sticky background. Content div scrolls past. Uses content_box_style.",
+    "timeline_marker": "Vertical line indicator with year/era on the side, sticky while in section.",
+    "footer": "Dark minimal footer with credits."
+  },
+  "image_urls": [
+    {
+      "category": "hero",
+      "description": "Misty swamp forest for atmospheric hero intro",
+      "url": "https://images.unsplash.com/photo-1549368928-a3b2b288c0bd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwyfHxtaXN0eSUyMHN3YW1wJTIwZm9yZXN0fGVufDB8fHx8MTc3OTQ1OTQ2Mnww&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "geology_origin",
+      "description": "Old growth forest with sunlight filtering through",
+      "url": "https://images.unsplash.com/photo-1559489110-8dfcd70c8801?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxvbGQlMjBncm93dGglMjBmb3Jlc3QlMjBzdW5saWdodHxlbnwwfHx8fDE3Nzk0NTk0NjJ8MA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "ecosystem",
+      "description": "Cypress trees with knees in water",
+      "url": "https://images.unsplash.com/photo-1467625575448-2ef10dabab8a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwyfHxjeXByZXNzJTIwdHJlZXMlMjBrbmVlcyUyMHdhdGVyfGVufDB8fHx8MTc3OTQ1OTQ2Mnww&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "river_history",
+      "description": "Congaree river at sunset",
+      "url": "https://images.unsplash.com/photo-1632677663588-cf2651be485a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxyaXZlciUyMGZvcmVzdCUyMHN1bnNldHxlbnwwfHx8fDE3Nzk0NTk0NjJ8MA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "indigenous_heritage",
+      "description": "Fireflies at night representing ancient magic of the land",
+      "url": "https://images.unsplash.com/photo-1730819480328-5bb66bebc21f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwzfHxmaXJlZmxpZXMlMjBuaWdodCUyMGZvcmVzdHxlbnwwfHx8fDE3Nzk0NTk0NjJ8MA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "colonial_logging",
+      "description": "Vintage or cut trees logging history",
+      "url": "https://images.unsplash.com/photo-1727012031047-fa0f83295e29?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwyfHxjdXQlMjB0cmVlcyUyMGxvZ2dpbmclMjBoaXN0b3J5fGVufDB8fHx8MTc3OTQ1OTQ2Mnww&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "wildlife",
+      "description": "Deer in forest",
+      "url": "https://images.unsplash.com/photo-1543946207-39bd91e70ca7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxkZWVyJTIwZm9yZXN0JTIwd2lsZGxpZmV8ZW58MHx8fHwxNzc5NDU5NDYyfDA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "wildlife_night",
+      "description": "Owl at night in forest",
+      "url": "https://images.unsplash.com/photo-1480679549270-ebddf099cb85?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwzfHxvd2wlMjBuaWdodCUyMGZvcmVzdHxlbnwwfHx8fDE3Nzk0NTk0NjJ8MA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "modern_park",
+      "description": "Aerial view of forest canopy",
+      "url": "https://images.unsplash.com/photo-1640125346217-e4bb9313d6bd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwxfHxhZXJpYWwlMjBmb3Jlc3QlMjBjYW5vcHl8ZW58MHx8fHwxNzc5NDU5NDYyfDA&ixlib=rb-4.1.0&q=85"
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Use framer-motion heavily for scroll-based transitions on text panels.",
+    "Implement Lenis for smooth scrolling.",
+    "Ensure background images are high-quality, cover the viewport, and remain stationary (or move slowly via parallax) while text panels scroll over them.",
+    "Apply backdrop-blur to text panels to allow the forest imagery to bleed through subtly.",
+    "Do not use generic UI cards. Use 'Crystal Glass' style overlays with 1px border for text containers.",
+    "Incorporate data-testid attributes for testing interactive elements.",
+    "Add dark gradient overlays (e.g., bg-black/40) to hero images to ensure white text contrast.",
+    "Do not use generic Inter font. Import Cormorant Garamond and Outfit via Google Fonts.",
+    "Make sure images are applied via inline styles with background-image or using next/image with full layout covering the section bounds.",
+    "Use standard HTML section elements instead of layout components for the documentary scrolling feel."
+  ]
+}
