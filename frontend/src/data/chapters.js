@@ -1,8 +1,19 @@
 // Chapter data for Congaree National Park documentary timeline
 export const chapters = [
   {
-    id: "geology",
+    id: "tectonics",
     marker: "Chapter I",
+    era: "~300 Million Years Ago",
+    title: "When Continents Collided",
+    body:
+      "The story of Congaree begins long before any forest — in the slow, violent grinding of tectonic plates. As the supercontinent Pangaea assembled, ancient Africa drove westward into proto-North America. The collision crumpled the crust upward, raising the Appalachian Mountains to Himalayan heights. For hundreds of millions of years, wind, rain, and rivers wore those peaks down — and every grain of sediment carried eastward would, eventually, settle here. The land we now call the Congaree floodplain is, in a real sense, the bones of vanished mountains.",
+    image:
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?crop=entropy&cs=srgb&fm=jpg&q=85&w=2400",
+    align: "right",
+  },
+  {
+    id: "geology",
+    marker: "Chapter II",
     era: "~15,000 Years Ago",
     title: "Born of a River",
     body:
@@ -13,7 +24,7 @@ export const chapters = [
   },
   {
     id: "ancient-forest",
-    marker: "Chapter II",
+    marker: "Chapter III",
     era: "5,000 BCE — Present",
     title: "A Cathedral of Giants",
     body:
@@ -24,7 +35,7 @@ export const chapters = [
   },
   {
     id: "indigenous",
-    marker: "Chapter III",
+    marker: "Chapter IV",
     era: "Pre‑1700",
     title: "The People of the Congaree",
     body:
@@ -35,7 +46,7 @@ export const chapters = [
   },
   {
     id: "logging",
-    marker: "Chapter IV",
+    marker: "Chapter V",
     era: "1880 — 1915",
     title: "The Saw and the Swamp",
     body:
@@ -46,7 +57,7 @@ export const chapters = [
   },
   {
     id: "conservation",
-    marker: "Chapter V",
+    marker: "Chapter VI",
     era: "1969 — 1976",
     title: "A Forest Defended",
     body:
@@ -57,7 +68,7 @@ export const chapters = [
   },
   {
     id: "wildlife",
-    marker: "Chapter VI",
+    marker: "Chapter VII",
     era: "The Living Park",
     title: "A Sanctuary of Wings & Shadow",
     body:
@@ -68,7 +79,7 @@ export const chapters = [
   },
   {
     id: "night",
-    marker: "Chapter VII",
+    marker: "Chapter VIII",
     era: "After Dusk",
     title: "When the Forest Awakens",
     body:
@@ -79,7 +90,7 @@ export const chapters = [
   },
   {
     id: "modern",
-    marker: "Chapter VIII",
+    marker: "Chapter IX",
     era: "Today & Tomorrow",
     title: "A Canopy Worth Keeping",
     body:
