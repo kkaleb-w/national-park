@@ -22,6 +22,7 @@ export default function TopBar() {
       <nav className="hidden md:flex items-center gap-2 text-[10px] uppercase tracking-[0.35em] text-[#9ca395]">
         <span>{chapters.length} Chapters</span>
         <span className="text-white/20">/</span>
+        <span>By Kaleb Wright</span>
       </nav>
     </motion.header>
   );
