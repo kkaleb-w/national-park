@@ -7,27 +7,29 @@ export const chapters = [
     body:
       "Water is the reason Congaree exists at all. Every year, the Congaree River spills over its banks and floods the forest floor, carrying nutrients and rich sediment across the floodplain. These floods can seem destructive, but they are what keep the ecosystem alive. Fish move through the flooded woods, tree roots soak in fresh minerals, and countless species depend on the changing water levels to survive. In Congaree, the river is not separate from the forest. It is the force that feeds it, reshapes it, and keeps it breathing.",
     image:
-      "https://unsplash.com/photos/green-trees-beside-river-during-daytime-Tss1uOMczDg?crop=entropy&cs=srgb&fm=jpg&q=85&w=2400",
+      "https://images.unsplash.com/photo-1584282479918-1ea22427dc0f?crop=entropy&cs=srgb&fm=jpg&q=85&w=2400",
     align: "left",
     },
 
   {
     id: "atmosphere",
-    title: "Atmosphere — Air, Climate, and the Breath of the Forest",
+    marker: "Prequel",
+    title: "Atmosphere",
     body:
       "The atmosphere above Congaree controls the rhythm of the park. Warm southern air brings heavy rain, thick humidity, and long growing seasons that allow trees to reach incredible heights. Mist often hangs beneath the canopy in the early morning, while storms rolling in from the Gulf help refill the wetlands and rivers below. The forest also gives something back to the atmosphere. Its trees absorb carbon dioxide, release oxygen, and help cool the surrounding environment. Every breath in the park is part of a larger cycle connecting the forest to the planet itself.",
     image:
-      "https://unsplash.com/photos/a-view-of-a-mountain-range-covered-in-clouds-o3oRN_1tM4A?crop=entropy&cs=srgb&fm=jpg&q=85&w=2400",
+      "https://images.unsplash.com/photo-1727369828790-597be2b66f8c?crop=entropy&cs=srgb&fm=jpg&q=85&w=2400",
     align: "right",
     },
 
   {
     id: "biosphere",
-    title: "Biosphere — A Living World Connected Together",
+    marker: "Prequel",
+    title: "Biosphere",
     body:
       "Congaree is more than a collection of trees and animals. It is a living network where every organism depends on another. Towering bald cypress and tupelo trees create shelter for birds, insects, and mammals. Fungi break down fallen wood and return nutrients to the soil. Owls hunt beneath the canopy while fireflies light the forest in synchronized waves during spring nights. Even the smallest organisms in the swamp play a role in keeping the ecosystem balanced. Life here survives through connection, with water, soil, air, plants, and animals all working together as one system.",
     image:
-      "https://unsplash.com/photos/a-large-turtle-laying-on-top-of-a-lush-green-field-b2iauwRsxOM?crop=entropy&cs=srgb&fm=jpg&q=85&w=2400",
+      "https://images.unsplash.com/photo-1623034621620-203f9c02bb23?crop=entropy&cs=srgb&fm=jpg&q=85&w=2400",
     align: "left",
     },
 
