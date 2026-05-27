@@ -13,25 +13,26 @@ function App() {
   useSmoothScroll();
 
   return (
-    <div className="App bg-[#0a0b0a] text-[#e6e0d4] min-h-screen" data-testid="app-root">
-      <ScrollProgress />
-      <TopBar />
-      <main data-testid="main">
-        <Hero />
-        {chapters.map((c, i) => (
-          <Chapter key={c.id} chapter={c} index={i} />
-        ))}
-        <Finale />
-      </main>
-    </div>
-  );
-  return (
     <>
       <Ambience />
 
-      {/* existing stuff */}
-      <Hero />
-      {/* etc */}
+      <div
+        className="App bg-[#0a0b0a] text-[#e6e0d4] min-h-screen"
+        data-testid="app-root"
+      >
+        <ScrollProgress />
+        <TopBar />
+
+        <main data-testid="main">
+          <Hero />
+
+          {chapters.map((c, i) => (
+            <Chapter key={c.id} chapter={c} index={i} />
+          ))}
+
+          <Finale />
+        </main>
+      </div>
     </>
   );
 }
