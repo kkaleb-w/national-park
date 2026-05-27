@@ -1,41 +1,38 @@
-import { useEffect, useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function Ambience() {
   const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  useEffect(() => {
+  const toggleAudio = async () => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    audio.loop = true;
-    audio.volume = 0.15;
-
-    const startAudio = async () => {
-      try {
+    try {
+      if (!isPlaying) {
         await audio.play();
-        console.log("Audio playing");
-      } catch (err) {
-        console.log("Autoplay blocked until interaction");
+        setIsPlaying(true);
+      } else {
+        audio.pause();
+        setIsPlaying(false);
       }
-    };
-
-    // multiple interaction types = more reliable
-    const events = ["click", "scroll", "keydown", "touchstart"];
-
-    events.forEach((event) => {
-      window.addEventListener(event, startAudio, { once: true });
-    });
-
-    return () => {
-      events.forEach((event) => {
-        window.removeEventListener(event, startAudio);
-      });
-    };
-  }, []);
+    } catch (err) {
+      console.log("Audio error:", err);
+    }
+  };
 
   return (
-    <audio ref={audioRef} preload="auto">
-      <source src="/audio/birds.mp3" type="audio/mpeg" />
-    </audio>
+    <>
+      <audio ref={audioRef} loop preload="auto">
+        <source src="/audio/birds.mp3" type="audio/mpeg" />
+      </audio>
+
+      <button
+        onClick={toggleAudio}
+        className="fixed bottom-5 right-5 z-50 bg-[#1a1f1a] text-[#e6e0d4] px-4 py-2 rounded-lg border border-[#333] hover:bg-[#222]"
+      >
+        {isPlaying ? "Pause Ambience" : "Start Ambience"}
+      </button>
+    </>
   );
 }
