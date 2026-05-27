@@ -6,28 +6,31 @@ export default function Ambience() {
   useEffect(() => {
     const audio = audioRef.current;
 
-    // Lower volume so it's subtle
-    audio.volume = 0.8;
+    if (!audio) return;
 
-    // Some browsers block autoplay until interaction
-    const enableAudio = () => {
-      audio.play().catch(() => {});
-      window.removeEventListener("click", enableAudio);
+    audio.volume = 0.8;
+    audio.loop = true;
+
+    const startAudio = async () => {
+      try {
+        await audio.play();
+        console.log("Audio started");
+      } catch (err) {
+        console.log("Autoplay blocked:", err);
+      }
     };
 
-    window.addEventListener("click", enableAudio);
+    // Start audio after first click anywhere
+    window.addEventListener("click", startAudio, { once: true });
 
     return () => {
-      window.removeEventListener("click", enableAudio);
+      window.removeEventListener("click", startAudio);
     };
   }, []);
 
   return (
-    <audio
-      ref={audioRef}
-      src="/audio/birds.mp3"
-      loop
-      preload="auto"
-    />
+    <audio ref={audioRef}>
+      <source src="/audio/birds.mp3" type="audio/mpeg" />
+    </audio>
   );
 }
