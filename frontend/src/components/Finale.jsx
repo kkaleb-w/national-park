@@ -76,10 +76,6 @@ export default function Finale() {
           data-testid="finale-meta"
         >
           <div className="flex items-center gap-3">
-            <MapPin className="h-4 w-4 text-[#d4a373]" strokeWidth={1.5} />
-            <span>Hopkins, South Carolina</span>
-          </div>
-          <div className="flex items-center gap-3">
             <Calendar className="h-4 w-4 text-[#d4a373]" strokeWidth={1.5} />
             <span>Designated National Park, 2003</span>
           </div>
@@ -91,7 +87,6 @@ export default function Finale() {
         data-testid="footer"
       >
         <span>A Science Project · Documentary Edition</span>
-        <span>Imagery via Unsplash · Story by the Forest</span>
       </footer>
     </section>
   );
