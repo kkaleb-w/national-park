@@ -3,7 +3,7 @@ export const chapters = [
   {
     id: "hydrosphere",
     marker: "Prequel",
-    title: "Hydrosphere,
+    title: "Hydrosphere",
     body:
       "Water is the reason Congaree exists at all. Every year, the Congaree River spills over its banks and floods the forest floor, carrying nutrients and rich sediment across the floodplain. These floods can seem destructive, but they are what keep the ecosystem alive. Fish move through the flooded woods, tree roots soak in fresh minerals, and countless species depend on the changing water levels to survive. In Congaree, the river is not separate from the forest. It is the force that feeds it, reshapes it, and keeps it breathing.",
     image:
