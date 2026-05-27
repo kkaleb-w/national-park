@@ -1,3 +1,4 @@
+import Ambience from "./components/Ambience";
 import "@/App.css";
 import useSmoothScroll from "@/hooks/useSmoothScroll";
 import Hero from "@/components/Hero";
@@ -6,7 +7,17 @@ import Finale from "@/components/Finale";
 import ScrollProgress from "@/components/ScrollProgress";
 import TopBar from "@/components/TopBar";
 import { chapters } from "@/data/chapters";
+function App() {
+  return (
+    <>
+      <Ambience />
 
+      {/* existing stuff */}
+      <Hero />
+      {/* etc */}
+    </>
+  );
+}
 function App() {
   useSmoothScroll();
 
