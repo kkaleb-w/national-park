@@ -5,31 +5,36 @@ export default function Ambience() {
 
   useEffect(() => {
     const audio = audioRef.current;
-
     if (!audio) return;
 
-    audio.volume = 0.8;
     audio.loop = true;
+    audio.volume = 0.15;
 
     const startAudio = async () => {
       try {
         await audio.play();
-        console.log("Audio started");
+        console.log("Audio playing");
       } catch (err) {
-        console.log("Autoplay blocked:", err);
+        console.log("Autoplay blocked until interaction");
       }
     };
 
-    // Start audio after first click anywhere
-    window.addEventListener("click", startAudio, { once: true });
+    // multiple interaction types = more reliable
+    const events = ["click", "scroll", "keydown", "touchstart"];
+
+    events.forEach((event) => {
+      window.addEventListener(event, startAudio, { once: true });
+    });
 
     return () => {
-      window.removeEventListener("click", startAudio);
+      events.forEach((event) => {
+        window.removeEventListener(event, startAudio);
+      });
     };
   }, []);
 
   return (
-    <audio ref={audioRef}>
+    <audio ref={audioRef} preload="auto">
       <source src="/audio/birds.mp3" type="audio/mpeg" />
     </audio>
   );
