@@ -8,17 +8,7 @@ import ScrollProgress from "@/components/ScrollProgress";
 import TopBar from "@/components/TopBar";
 import { chapters } from "@/data/chapters";
 import Ambience from "./components/Ambience";
-function App() {
-  return (
-    <>
-      <Ambience />
 
-      {/* existing stuff */}
-      <Hero />
-      {/* etc */}
-    </>
-  );
-}
 function App() {
   useSmoothScroll();
 
@@ -34,6 +24,15 @@ function App() {
         <Finale />
       </main>
     </div>
+  );
+  return (
+    <>
+      <Ambience />
+
+      {/* existing stuff */}
+      <Hero />
+      {/* etc */}
+    </>
   );
 }
 
