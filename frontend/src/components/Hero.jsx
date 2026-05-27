@@ -67,7 +67,7 @@ export default function Hero() {
           className="mt-8 max-w-xl font-sans text-base sm:text-lg leading-relaxed text-[#c8c2b6]"
           data-testid="hero-subtitle"
         >
-          A timeline of America&apos;s tallest deciduous forest — from glacial floods
+          A timeline of America&apos;s tallest deciduous forest, from glacial floods
           and ancient peoples to a national park born of citizen courage.
         </motion.p>
 
