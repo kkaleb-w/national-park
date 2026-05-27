@@ -46,7 +46,7 @@ export default function Finale() {
           >
             Congaree National Park is one of the last great old‑growth bottomland
             hardwood forests in North America. It survives because people fought
-            for it — and because each generation has chosen to keep fighting.
+            for it, and because each generation has chosen to keep fighting.
             What we have walked through is a record. What we do next becomes the
             story.
           </p>
