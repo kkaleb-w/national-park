@@ -24,7 +24,10 @@ export default function Ambience() {
   return (
     <>
       <audio ref={audioRef} loop preload="auto">
-        <source src="/audio/birds.mp3" type="audio/mpeg" />
+        <source
+          src={`${process.env.PUBLIC_URL}/audio/birds.mp3`}
+          type="audio/mpeg"
+        />
       </audio>
 
       <button
